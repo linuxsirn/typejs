@@ -1,1 +1,2 @@
-console.log('aaaaaaaaa');
+var c = false;
+c = true;
