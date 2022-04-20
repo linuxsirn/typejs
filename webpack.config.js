@@ -41,6 +41,28 @@ module.exports={
                 exclude:/node_module/,
 
             },
+            //陪着less
+            {
+                test:/\.less$/,
+                use:[
+                    "style-loader",
+                    "css-loader",
+                    {
+                        loader:"postcss-loader",
+                        options:{
+                            postcssOptions:{
+                                plugins:[
+                                    "postcss-preset-env",
+                                    {
+                                        browsers:'last 2 versions'
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "less-loader"
+                ]
+            }
          
           
         ]
