@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        div{
-            width: 800px;
+        #box{
+            width: 500px;
             height: 300px;
             background-color: #000;
             color: aqua;
             display: flex;
             flex-direction: row;
-            justify-content:space-between;
+            /* justify-content:center; */
+            /* align-items: stretch; */
+            flex-wrap: wrap;
+            align-content: flex-start;
         }
-        span{
+        #box span{
             margin-right: 10px;
             margin-top: 10px;
             margin-bottom: 10px;
@@ -23,13 +26,53 @@
             height: 100px;
             background-color: #fff;
         }
+        section{
+            width: 60%;
+            height: 150px;
+            background-color: pink;
+            margin: 0 auto;
+            display: flex;
+        }
+        section div:nth-child(1){
+            width: 100px;
+            height: 150px;
+            background-color: red;
+           
+        }
+        section div:nth-child(3){
+            width: 100px;
+            height: 150px;
+            background-color:blue;
+        }
+        section div:nth-child(2){
+           flex: 1;
+        }
+        p{
+            width: 60%;
+            height: 150px;
+            background-color: pink;
+            margin: 0 auto;
+            display: flex;
+        }
+        p span{
+            flex: 1;
+            border: 1px solid #000;
+        }
     </style>
 </head>
 <body>
-    <div>
+    <div id="box">
         <span>1</span>
         <span>2</span>
-        <span>3</span>
+        <span>2</span>
+        <span>1</span>
+        <span>2</span>
     </div>
+    <section>
+        <div>这是一个盒子</div>
+        <div>这是一个盒子</div>
+        <div>这是一个盒子</div>
+    </section>    
+    <p><span></span><span></span><span></span></p>
 </body>
 </html>
